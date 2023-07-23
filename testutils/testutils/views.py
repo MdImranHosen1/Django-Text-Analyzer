@@ -55,9 +55,9 @@ def analyze(request):
     if extraspaceremover == 'on':
         for i, ch in enumerate(userText):
             if not (userText[i] == ' ' and userText[i+1] == ' '):
-                text=text+ch
+                text = text+ch
     else:
-        text="Empty"
+        text = "Empty"
 
     dic["extraspaceremover"]=text
 

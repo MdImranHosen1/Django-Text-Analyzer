@@ -1,23 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+  <meta charset="UTF-8" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+
+  <title>Title</title>
 </head>
+
 <body>
-    <h1>Welcome to text analyzer. Enter your text below.</h1>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">TextTutils</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
+        aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+          </li>
+        </ul>
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+  <!-- alart start-->
+  <div class="alert alert-warning alert-dismissible fade show" role="alert">
+    <strong>Welcome!</strong> Thanks for visiting.
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+  <!-- alart end -->
+  <div class="container bg-light border pb-4">
+
+
     <form action="/analyze" method="get">
-        <textarea name="text" style="width: 657px; height: 66px;"></textarea>
-        <br>
-        <input type="checkbox" name="punctuation" > Punctuation checker
-        <br>
-        <input type="checkbox" name="fullcaps" > UPPERCASE
-        <br>
-        <input type="checkbox" name="newlineremover" > New Line Remover
-        <br>
-        <input type="checkbox" name="extraspaceremover" > Extra Spaces Remover
-        <br>
-        <button>Submit</button>
+      <label for="exampleFormControlTextarea1" class="form-label d-flex justify-content-center fs-4 fw-bolder">Enter
+        Text</label>
+      <textarea name="text" class="form-control " id="exampleFormControlTextarea1" rows="3"></textarea>
+      <br />
+
+      <div class="form-switch">
+        <input type="checkbox" class="form-check-input" name="punctuation" />
+        Punctuation checker
+        <br />
+        <input type="checkbox" class="form-check-input" name="fullcaps" />
+        UPPERCASE
+        <br />
+        <input type="checkbox" class="form-check-input" name="newlineremover" />
+        New Line Remover
+        <br />
+        <input type="checkbox" class="form-check-input" name="extraspaceremover" />
+        Extra Spaces Remover
+        <br />
+      </div>
+      <button class="btn btn-primary mt-2">Submit</button>
     </form>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
 </body>
+
 </html>
