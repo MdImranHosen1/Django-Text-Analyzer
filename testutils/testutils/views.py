@@ -8,11 +8,11 @@ def index(request):
     # return HttpResponse("Home")
 
 def analyze(request):
-    userText = request.GET.get('text', 'default')
-    puncSwitch= request.GET.get('punctuation', 'off')
-    fullcaps = request.GET.get('fullcaps', 'off')
-    newlineremover = request.GET.get('newlineremover', 'off')
-    extraspaceremover = request.GET.get('extraspaceremover', 'off')
+    userText = request.POST.get('text', 'default')
+    puncSwitch= request.POST.get('punctuation', 'off')
+    fullcaps = request.POST.get('fullcaps', 'off')
+    newlineremover = request.POST.get('newlineremover', 'off')
+    extraspaceremover = request.POST.get('extraspaceremover', 'off')
 
     print(userText)
     print(puncSwitch)
@@ -61,7 +61,7 @@ def analyze(request):
 
     dic["extraspaceremover"]=text
 
-    return render(request, 'analyze.html',dic)
+    return render(request, 'analyze.html', dic)
 
 
 
